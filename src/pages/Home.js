@@ -13,7 +13,7 @@ function Home() {
         , where innovation meets libraries in the digital age.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-between mt-8">
-        <div className="flex flex-col items-center sm:items-start">
+        <div className="flex flex-col items-center ">
           <img src={photo} className="h-60 rounded-full" alt="Profile" />
           <span className="text-slate-700 font-extrabold text-center text-4xl mt-4 sm:mt-0">
             Next-Gen Library Services Using IoT
