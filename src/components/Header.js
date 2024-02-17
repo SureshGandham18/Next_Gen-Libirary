@@ -5,6 +5,7 @@ import { HiStatusOnline } from 'react-icons/hi';
 import { MdHome } from 'react-icons/md';
 import { IoMdContact } from 'react-icons/io';
 import { FaInfoCircle } from "react-icons/fa";
+import { MdEventAvailable } from "react-icons/md";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +33,10 @@ function Header() {
             <HiStatusOnline size={25}/>
             <span>LIBRARY STATUS</span>
           </Link>
+          <Link to="/bookavailability" className="flex text-lg font-semibold items-center gap-1 hover:underline">
+          <MdEventAvailable size={25}/>
+            <span>BOOK AVAILABILITY</span>
+          </Link>
           <Link to="/contact" className="flex text-lg font-semibold items-center gap-1 hover:underline">
             <IoMdContact size={25} />
             <span>CONTACT</span>
@@ -40,7 +45,7 @@ function Header() {
 
         {/* Hamburger menu for mobile view */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-white focus:outline-none">
+          <button onClick={toggleMenu} className="text-black focus:outline-none">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {isMenuOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -56,25 +61,31 @@ function Header() {
           <div className="absolute top-16 right-0 bg-white rounded-md shadow-md z-20 md:hidden">
             <ul className="text-lg font-bold p-4">
               <li>
-                <Link to="/" className="flex items-center gap-1 hover:underline" onClick={toggleMenu}>
+                <Link to="/" className="flex items-center gap-1 underline" onClick={toggleMenu}>
                   <MdHome />
                   <span>Home</span>
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="flex items-center gap-1 hover:underline" onClick={toggleMenu}>
+                <Link to="/about" className="flex items-center gap-1 underline" onClick={toggleMenu}>
                 <FaInfoCircle/>
             <span>About</span>
                 </Link>
               </li>
               <li>
-                <Link to="/librarystatus" className="flex items-center gap-1 hover:underline" onClick={toggleMenu}>
+                <Link to="/librarystatus" className="flex items-center gap-1 underline" onClick={toggleMenu}>
                   <HiStatusOnline />
                   <span>Library Status</span>
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="flex items-center gap-1 hover:underline" onClick={toggleMenu}>
+                <Link to="/bookavailability" className="flex items-center gap-1 underline" onClick={toggleMenu}>
+                  <MdEventAvailable />
+                  <span>Book Availability</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="flex items-center gap-1 underline" onClick={toggleMenu}>
                   <IoMdContact />
                   <span>Contact</span>
                 </Link>
