@@ -12,7 +12,7 @@ import photo from '../components/photo.png';
 
 function Home() {
   const sliderSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -34,7 +34,7 @@ function Home() {
         </p>
         <img src={photo} className="h-40 rounded-full mt-6 sm:mt-0" alt="Profile" />
       </div>
-      <div className="flex flex-col sm:flex-row items-center gap-2 mt-8 sm:mt-16">
+      <div className="flex flex-col sm:flex-row items-center gap-2 mt-8 sm:mt-2">
         <Slider {...sliderSettings} className="h-auto sm:h-96 w-full sm:w-1/2 rounded-3xl">
           <div>
             <img src={photo1} className="w-full h-full object-cover rounded-3xl" alt="Slider Photo" />
@@ -52,7 +52,7 @@ function Home() {
             <img src={photo5} className="w-full h-full object-cover rounded-3xl" alt="Slider Photo" />
           </div>
         </Slider>
-        <div className="bg-slate-100 rounded-lg p-3 mt-6 sm:mt-0 w-full sm:w-1/2">
+        <div className="bg-slate-100 rounded-lg p-3 mt-6 sm:text-center sm:mb-24 w-full sm:w-1/2">
           <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Study Tips for Gaining Knowledge</h2>
           <p className="text-gray-700 mb-2">Set clear goals and define what you want to learn.</p>
           <p className="text-gray-700 mb-2">Diversify your sources by exploring books, online courses, podcasts, etc.</p>
