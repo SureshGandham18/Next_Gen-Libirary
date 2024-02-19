@@ -34,7 +34,7 @@ function About() {
             <div className="container mx-auto">
                 <h1 className="text-center text-4xl font-bold text-gray-800 mb-12 mt-11">About</h1>
                 <p className="text-center text-gray-800 text-lg mb-12">Welcome to "Next-Gen Library Services using IoT for Enhanced User Experience"! Our project aims to revolutionize the way libraries operate by integrating cutting-edge Internet of Things (IoT) technology. By leveraging sensors, smart algorithms, and a user-friendly web application, we're creating a more dynamic and personalized library environment. From noise detection for a quieter study space to personalized book recommendations, our project enhances every aspect of the library experience. Join us as we reimagine the future of libraries and empower users with smarter, more engaging services.</p>
-                <div className="grid  gap-8 md:grid-cols-2">
+                <div className="grid gap-8 md:grid-cols-2">
                     {interview_questions.map((each, index) => (
                         <div key={index} className="bg-white rounded-lg shadow-md p-6">
                             <h2 className="text-2xl font-semibold text-gray-800 mb-4">{each.question}</h2>

@@ -17,8 +17,8 @@ function Header() {
   return (
     <header className="bg-slate-400 shadow-md fixed w-full z-10 top-0">
       <div className="flex justify-between items-center max-w-6xl mx-auto px-4 py-2">
-        <img src={photo} className="h-16 w-auto rounded-full" alt="Profile" />
-        
+        <span className='flex items-center gap-2'><img src={photo} className="h-16 w-auto rounded-full" alt="Profile" />
+        <span className='font-bold text-xl'>Next-Gen Library</span></span>
         {/* Desktop view: tabs */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link to="/" className="flex text-lg font-semibold items-center gap-1 hover:underline">
