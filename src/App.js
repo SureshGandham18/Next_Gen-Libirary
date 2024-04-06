@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Contact from './pages/Contact'
 import LibraryStatus from './pages/LibraryStatus'
 import BookAvailability from './pages/BookAvailability'
+import BookRecom from './pages/BookRecom'
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
     <BrowserRouter>
     <Header/>
       <Routes>
+        <Route path='/submit_data' element={<BookRecom/>}/>
         <Route path="/" element={<Home/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>

@@ -6,6 +6,7 @@ import { MdHome } from 'react-icons/md';
 import { IoMdContact } from 'react-icons/io';
 import { FaInfoCircle } from "react-icons/fa";
 import { MdEventAvailable } from "react-icons/md";
+import { MdOnlinePrediction } from "react-icons/md";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,24 +22,28 @@ function Header() {
         <span className='font-bold text-xl'>Next-Gen Library</span></span>
         {/* Desktop view: tabs */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="flex text-lg font-semibold items-center gap-1 hover:underline">
+          <Link to="/" className="flex text-2sm font-semibold items-center gap-1 hover:underline">
             <MdHome size={25} />
             <span>HOME</span>
           </Link>
-          <Link to="/about" className="flex text-lg font-semibold items-center gap-1 hover:underline">
-            <FaInfoCircle size={25}/>
+          <Link to="/about" className="flex text-sm font-semibold items-center gap-1 hover:underline">
+            <FaInfoCircle size={20}/>
             <span>ABOUT</span>
           </Link>
-          <Link to="/librarystatus" className="flex text-lg font-semibold items-center gap-1 hover:underline">
-            <HiStatusOnline size={25}/>
+          <Link to="/submit_data" className="flex text-sm font-semibold items-center gap-1 hover:underline">
+            <MdOnlinePrediction size={20}/>
+            <span>BOOK RECOMMENDER</span>
+          </Link>
+          <Link to="/librarystatus" className="flex text-sm font-semibold items-center gap-1 hover:underline">
+            <HiStatusOnline size={20}/>
             <span>LIBRARY STATUS</span>
           </Link>
-          <Link to="/bookavailability" className="flex text-lg font-semibold items-center gap-1 hover:underline">
-          <MdEventAvailable size={25}/>
+          <Link to="/bookavailability" className="flex text-sm font-semibold items-center gap-1 hover:underline">
+          <MdEventAvailable size={20}/>
             <span>BOOK AVAILABILITY</span>
           </Link>
-          <Link to="/contact" className="flex text-lg font-semibold items-center gap-1 hover:underline">
-            <IoMdContact size={25} />
+          <Link to="/contact" className="flex text-sm font-semibold items-center gap-1 hover:underline">
+            <IoMdContact size={20} />
             <span>CONTACT</span>
           </Link>
         </nav>
@@ -79,8 +84,14 @@ function Header() {
                 </Link>
               </li>
               <li>
+                <Link to="/submit_data" className="flex items-center gap-1 underline" onClick={toggleMenu}>
+                  <HiStatusOnline />
+                  <span>Book Recommender</span>
+                </Link>
+              </li>
+              <li>
                 <Link to="/bookavailability" className="flex items-center gap-1 underline" onClick={toggleMenu}>
-                  <MdEventAvailable />
+                  <MdOnlinePrediction />
                   <span>Book Availability</span>
                 </Link>
               </li>
